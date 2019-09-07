@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+<body>
+<h1>Hellow</h1>
+<script>
+let student= [{name:'sasi',maths:83,science:56,ICT:76},
+{name:'sinthu',maths:54,science:65,ICT:43},
+{name:'kokul',maths:43,science:54,ICT:66},
+{name:'kamal',maths:55,science:67,ICT:55}]
+//console.log(student);
+
+ 
+
+
+document.write("<table border=1>");
+document.write("<tr><th>name</th><th>maths</th><th>science</th><th>ICT</th><th>Total</th><th>Average</th></tr>");
+student.forEach(function(xyz){
+	document.write("<tr>");
+	document.write(`<td>${xyz.name}</td>`);
+    document.write(`<td>${xyz.maths}</td>`);
+    document.write(`<td>${xyz.science}</td>`);
+    document.write(`<td>${xyz.ICT}</td>`);
+    document.write(`<td>${xyz.maths+xyz.science+xyz.ICT}</td>`)
+    document.write(`<td>${(xyz.maths+xyz.science+xyz.ICT)/3}</td>`)
+	document.write("</tr>");
+});
+document.write("</table>");
+
+
+
+</script>
+</body>
+</html>

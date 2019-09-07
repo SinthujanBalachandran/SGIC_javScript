@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #divCalc{
+            margin: auto;
+            height: 300px;
+            width: 400px;
+            background-color: blue;
+            font-size: 20px;
+            color: azure;
+            border-radius: 50px;
+            border: 5px coral;
+            padding-top: 30px;
+            padding-left: 50px;
+        }
+        #divCalc ul{
+            list-style: none;
+        }
+        #divCalc .btn{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="divCalc">
+    <form name="addForm" onsubmit="return addNumber();"> 
+    <label>Enter number 1</label>
+    <input type="text" id="txt1" name="num1"/>
+<br/>
+    <label>Enter number 2</label>
+    <input type="text" id="txt2" name="num2"/>
+<br/>
+        <ul>
+        <li><input type="radio" name="operation" value="add">add</li>
+        <li><input type="radio" name="operation" value="subtract">subtract</li>
+        <li><input type="radio" name="operation" value="mul">multiply</li>
+        <li><input type="radio" name="operation" value="div">divide</li>
+    </ul>
+        <br/>
+    <input type="submit" value="add" class="btn"/>
+    </div>
+</form>
+
+    <script>
+        function addNumber(){
+           let num1 = Number(document.forms["addForm"]["num1"].value);
+            let num2 = Number(document.forms["addForm"]["num2"].value);
+            let operation = document.forms["addForm"]["operation"].value;
+
+            let answer= null;
+            
+            if(operation=="add"){
+                    answer = num1+num2;
+                    alert(answer);
+            }else if(operation=="subtract"){
+                answer = num1-num2;
+                alert(answer);
+            }else if(operation=="mul"){
+                answer = num1*num2;
+                alert(answer);
+            }else if(operation=="div"){
+                answer = num1/num2;
+                alert(answer);
+            }
+            return false;
+
+        }
+
+    </script>
+</body>
+</html>

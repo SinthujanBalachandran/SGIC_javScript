@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form name="addForm" onsubmit="return addNumber();"> 
+    <label>Enter number 1</label>
+    <input type="text" id="txt1" name="num1"/>
+<br/>
+    <label>Enter number 2</label>
+    <input type="text" id="txt2" name="num2"/>
+<br/>
+        <label>Choose a number</label>
+        <input type="radio" name="operation" value="add">add
+        <input type="radio" name="operation" value="subtract">subtract
+        <input type="radio" name="operation" value="mul">multiply
+        <input type="radio" name="operation" value="div">divide
+        <br/>
+    <input type="submit" value="add"/>
+</form>
+
+    <script>
+        function addNumber(){
+           let num1 = Number(document.forms["addForm"]["num1"].value);
+            let num2 = Number(document.forms["addForm"]["num2"].value);
+            let operation = document.forms["addForm"]["operation"].value;
+
+
+            if(operation=="add"){
+                    answer = num1+num2;
+                    alert(answer);
+            }else if(operation=="subtract"){
+                answer = num1-num2;
+                alert(answer);
+            }else if(operation=="mul"){
+                answer = num1*num2;
+                alert(answer);
+            }else if(operation=="div"){
+                answer = num1/num2;
+                alert(answer);
+            }
+            return false;
+
+        }
+
+    </script>
+</body>
+</html>

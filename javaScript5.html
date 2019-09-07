@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="questionArea">
+
+    </div>
+    <script>
+        let mcq=[
+            {
+                question:"Who is the owner of SGIC",
+                answers:["you","me","i don't know"],
+                cans:2
+                },
+             {
+                 question:"Who is the owner of BCCI",
+                 answers:["you","me","i don't know"],
+                 cans:1},
+             {
+                 question:"Who is the owner of SGIC",
+                 answers:["you","me","i don't know"],
+                 cans:2
+                 }
+                 ];
+
+    let questionStr=`<ol>`;
+            question.forEach(function(question){
+        questionStr = questionStr+`<li>
+        ${question.question}
+        <li>`
+
+        
+    });
+    questionStr = questionStr + `</ol>`;
+    document.getElementById("questionArea").innerHTML = questionStr;
+
+
+             
+
+    
+    
+
+
+    </script>
+</body>
+</html>
